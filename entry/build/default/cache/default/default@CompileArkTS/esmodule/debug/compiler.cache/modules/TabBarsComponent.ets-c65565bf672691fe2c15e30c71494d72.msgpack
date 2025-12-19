@@ -117,7 +117,7 @@ export default class TabBar extends ViewPU {
                 }
             });
             TabContent.tabBar({ builder: () => {
-                    this.TabBuilder.call(this, 'ç²¾é€‰', 0, { "id": 16777246, "type": 20000, params: [], "bundleName": "com.example.list_harmony", "moduleName": "entry" }, { "id": 16777246, "type": 20000, params: [], "bundleName": "com.example.list_harmony", "moduleName": "entry" });
+                    this.TabBuilder.call(this, 'ç²¾é€‰', 0, { "id": 16777247, "type": 20000, params: [], "bundleName": "com.example.list_harmony", "moduleName": "entry" }, { "id": 16777247, "type": 20000, params: [], "bundleName": "com.example.list_harmony", "moduleName": "entry" });
                 } });
         }, TabContent);
         TabContent.pop();
@@ -140,7 +140,7 @@ export default class TabBar extends ViewPU {
                 }
             });
             TabContent.tabBar({ builder: () => {
-                    this.TabBuilder.call(this, 'åˆ†ç±»', 1, { "id": 16777246, "type": 20000, params: [], "bundleName": "com.example.list_harmony", "moduleName": "entry" }, { "id": 16777246, "type": 20000, params: [], "bundleName": "com.example.list_harmony", "moduleName": "entry" });
+                    this.TabBuilder.call(this, 'åˆ†ç±»', 1, { "id": 16777247, "type": 20000, params: [], "bundleName": "com.example.list_harmony", "moduleName": "entry" }, { "id": 16777247, "type": 20000, params: [], "bundleName": "com.example.list_harmony", "moduleName": "entry" });
                 } });
         }, TabContent);
         TabContent.pop();
@@ -163,7 +163,7 @@ export default class TabBar extends ViewPU {
                 }
             });
             TabContent.tabBar({ builder: () => {
-                    this.TabBuilder.call(this, 'è´­ç‰©è½¦', 2, { "id": 16777246, "type": 20000, params: [], "bundleName": "com.example.list_harmony", "moduleName": "entry" }, { "id": 16777246, "type": 20000, params: [], "bundleName": "com.example.list_harmony", "moduleName": "entry" });
+                    this.TabBuilder.call(this, 'è´­ç‰©è½¦', 2, { "id": 16777247, "type": 20000, params: [], "bundleName": "com.example.list_harmony", "moduleName": "entry" }, { "id": 16777247, "type": 20000, params: [], "bundleName": "com.example.list_harmony", "moduleName": "entry" });
                 } });
         }, TabContent);
         TabContent.pop();
@@ -186,7 +186,7 @@ export default class TabBar extends ViewPU {
                 }
             });
             TabContent.tabBar({ builder: () => {
-                    this.TabBuilder.call(this, 'æˆ‘çš„', 3, { "id": 16777246, "type": 20000, params: [], "bundleName": "com.example.list_harmony", "moduleName": "entry" }, { "id": 16777246, "type": 20000, params: [], "bundleName": "com.example.list_harmony", "moduleName": "entry" });
+                    this.TabBuilder.call(this, 'æˆ‘çš„', 3, { "id": 16777247, "type": 20000, params: [], "bundleName": "com.example.list_harmony", "moduleName": "entry" }, { "id": 16777247, "type": 20000, params: [], "bundleName": "com.example.list_harmony", "moduleName": "entry" });
                 } });
         }, TabContent);
         TabContent.pop();
@@ -283,7 +283,7 @@ export default struct TabBar {
     .width(LAYOUT_WIDTH_OR_HEIGHT)
     .height(LAYOUT_WIDTH_OR_HEIGHT)
   }
-}ÀÔrE•¹../common/CommonConstants¯./CartComponent³./CategoryComponent¯./MineComponent¯./HomeComponentÔrF—ªassertions¨external¢id¤meta±moduleSideEffectsªresolvedByµsyntheticNamedExportsAÂÙ_C:\Users\ASUS\DevEcoStudioProjects\List_commodity\entry\src\main\ets\common\CommonConstants.etsAÃªoh-resolveÂFAÂÙ[C:\Users\ASUS\DevEcoStudioProjects\List_commodity\entry\src\main\ets\view\CartComponent.etsAÃªoh-resolveÂFAÂÙ_C:\Users\ASUS\DevEcoStudioProjects\List_commodity\entry\src\main\ets\view\CategoryComponent.etsAÃªoh-resolveÂFAÂÙ[C:\Users\ASUS\DevEcoStudioProjects\List_commodity\entry\src\main\ets\view\MineComponent.etsAÃªoh-resolveÂFAÂÙ[C:\Users\ASUS\DevEcoStudioProjects\List_commodity\entry\src\main\ets\view\HomeComponent.etsAÃªoh-resolveÂ“ÔrG–§version¤fileªsourceRoot§sources¥names¨mappings³TabBarsComponent.js ‘´TabBarsComponent.etsÜ Ã‘”    ‘” ˜”   ” ”	 	” ”! !”' '”ÌB ÌB”ÌC ÌC˜”   ” ”	 	” ” ” ”/ /”0 0˜”   ” ”	 	” ” ”" "”7 7”8 8˜”   ” ”	 	” ” ” ”/ /”0 0˜”   ” ”	 	” ” ” ”/ /”0 0–”   ” ” ” ” ” ‘”  ’”;  ”< !”” '” +”, 9”. ;‘” 0’” 	” ’” 	” ’” ” š” ” ” ” #” %”! 8”# :”. ÌO”0 ÌQ”9 Ìd’” ” 
+}ÀÔrE•¹../common/CommonConstants³./CategoryComponent¯./CartComponent¯./HomeComponent¯./MineComponentÔrF—ªassertions¨external¢id¤meta±moduleSideEffectsªresolvedByµsyntheticNamedExportsAÂÙ_C:\Users\ASUS\DevEcoStudioProjects\List_commodity\entry\src\main\ets\common\CommonConstants.etsAÃªoh-resolveÂFAÂÙ_C:\Users\ASUS\DevEcoStudioProjects\List_commodity\entry\src\main\ets\view\CategoryComponent.etsAÃªoh-resolveÂFAÂÙ[C:\Users\ASUS\DevEcoStudioProjects\List_commodity\entry\src\main\ets\view\CartComponent.etsAÃªoh-resolveÂFAÂÙ[C:\Users\ASUS\DevEcoStudioProjects\List_commodity\entry\src\main\ets\view\HomeComponent.etsAÃªoh-resolveÂFAÂÙ[C:\Users\ASUS\DevEcoStudioProjects\List_commodity\entry\src\main\ets\view\MineComponent.etsAÃªoh-resolveÂ“ÔrG–§version¤fileªsourceRoot§sources¥names¨mappings³TabBarsComponent.js ‘´TabBarsComponent.etsÜ Ã‘”    ‘” ˜”   ” ”	 	” ”! !”' '”ÌB ÌB”ÌC ÌC˜”   ” ”	 	” ” ” ”/ /”0 0˜”   ” ”	 	” ” ”" "”7 7”8 8˜”   ” ”	 	” ” ” ”/ /”0 0˜”   ” ”	 	” ” ” ”/ /”0 0–”   ” ” ” ” ” ‘”  ’”;  ”< !”” '” +”, 9”. ;‘” 0’” 	” ’” 	” ’” ” š” ” ” ” #” %”! 8”# :”. ÌO”0 ÌQ”9 Ìd’” ” 
 –” ” 
 ” %” %
 ” %” %–” ” 

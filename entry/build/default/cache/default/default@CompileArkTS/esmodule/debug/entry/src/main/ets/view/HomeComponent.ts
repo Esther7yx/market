@@ -44,12 +44,12 @@ export class HomeComponent extends ViewPU {
             Swiper.borderRadius(10);
         }, Swiper);
         this.observeComponentCreation2((elmtId, isInitialRender) => {
-            Image.create({ "id": 16777242, "type": 20000, params: [], "bundleName": "com.example.list_harmony", "moduleName": "entry" });
+            Image.create({ "id": 16777243, "type": 20000, params: [], "bundleName": "com.example.list_harmony", "moduleName": "entry" });
             Image.width('100%');
             Image.height(150);
         }, Image);
         this.observeComponentCreation2((elmtId, isInitialRender) => {
-            Image.create({ "id": 16777243, "type": 20000, params: [], "bundleName": "com.example.list_harmony", "moduleName": "entry" });
+            Image.create({ "id": 16777244, "type": 20000, params: [], "bundleName": "com.example.list_harmony", "moduleName": "entry" });
             Image.width('100%');
             Image.height(150);
         }, Image);

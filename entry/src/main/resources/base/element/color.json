@@ -19,6 +19,11 @@
     {
       "name": "freshRed",
       "value": "#E92F4F"
+    },
+
+    {
+      "name": "start_window_background",
+      "value": "#FFFFFF"
     }
   ]
 }

@@ -101,35 +101,39 @@
 			"id":	"0x01000018"
 		}, {
 			"type":	"color",
-			"name":	"white",
+			"name":	"start_window_background",
 			"id":	"0x01000019"
 		}, {
-			"type":	"media",
-			"name":	"goodsImg",
+			"type":	"color",
+			"name":	"white",
 			"id":	"0x0100001A"
 		}, {
 			"type":	"media",
-			"name":	"goodsImg_2",
+			"name":	"goodsImg",
 			"id":	"0x0100001B"
 		}, {
 			"type":	"media",
-			"name":	"goodsImg_3",
+			"name":	"goodsImg_2",
 			"id":	"0x0100001C"
 		}, {
 			"type":	"media",
-			"name":	"goodsImg_4",
+			"name":	"goodsImg_3",
 			"id":	"0x0100001D"
 		}, {
 			"type":	"media",
-			"name":	"icon",
+			"name":	"goodsImg_4",
 			"id":	"0x0100001E"
 		}, {
 			"type":	"media",
-			"name":	"refreshing",
+			"name":	"icon",
 			"id":	"0x0100001F"
+		}, {
+			"type":	"media",
+			"name":	"refreshing",
+			"id":	"0x01000020"
 		}, {
 			"type":	"profile",
 			"name":	"main_pages",
-			"id":	"0x01000020"
+			"id":	"0x01000021"
 		}]
 }
