@@ -3,10 +3,7 @@
     "MODULES": [
       {
         "MODULE_NAME": "1043bfc77febe75fafec0c4309faccf1",
-        "API_TYPE": "stageMode",
-        "INCREMENTAL_TASKS": {
-          "COMPILE_ARKTS": true
-        }
+        "API_TYPE": "stageMode"
       }
     ],
     "NATIVE_COMPILER": "Default",
@@ -19,16 +16,21 @@
     "IS_HVIGORFILE_TYPE_CHECK": false,
     "TASK_TIME": {
       "1043bfc77febe75fafec0c4309faccf1": {
-        "CreateModuleInfo": 1620300,
-        "ConfigureCmake": 1844300,
-        "PreCheckSyscap": 1092300,
-        "GeneratePkgContextInfo": 5908500,
-        "ProcessIntegratedHsp": 1770400,
-        "BuildNativeWithCmake": 689800,
-        "SyscapTransform": 4929100,
-        "ProcessStartupConfig": 2532100,
-        "BuildNativeWithNinja": 1444900,
-        "BuildJS": 3837300
+        "CreateModuleInfo": 1705700,
+        "ConfigureCmake": 755500,
+        "PreCheckSyscap": 622200,
+        "GeneratePkgContextInfo": 10061500,
+        "ProcessIntegratedHsp": 1383900,
+        "BuildNativeWithCmake": 743500,
+        "SyscapTransform": 12872300,
+        "ProcessStartupConfig": 2468500,
+        "BuildNativeWithNinja": 2136500,
+        "BuildJS": 7500000,
+        "ProcessCompiledResources": 1599200,
+        "PackingCheck": 17134700,
+        "SignHap": 5896700,
+        "CollectDebugSymbol": 2904100,
+        "assembleHap": 472700
       }
     },
     "APIS": [
@@ -49,29 +51,10 @@
       "getProductName",
       "nodesEvaluated",
       "getParameter",
-      "getCommandEntryTask",
-      "getStartParams"
+      "getCommandEntryTask"
     ],
     "CONFIG_PROPERTIES": {},
-    "TOTAL_TIME": 1707895000,
-    "BUILD_ID": "202512232251526850",
-    "ERROR_MESSAGE": [
-      {
-        "CODE": "10605034",
-        "TIMESTAMP": "1766501514373"
-      },
-      {
-        "CODE": "10605008",
-        "TIMESTAMP": "1766501514373"
-      },
-      {
-        "CODE": "10605038",
-        "TIMESTAMP": "1766501514373"
-      },
-      {
-        "CODE": "10605008",
-        "TIMESTAMP": "1766501514373"
-      }
-    ]
+    "TOTAL_TIME": 810309500,
+    "BUILD_ID": "202512240104431320"
   }
 }

@@ -1,9 +1,29 @@
 import router from '@ohos.router'
+import { GoodsItem } from '../viewmodel/InitialData'
 
 @Entry
 @Component
 export struct GoodsDetail {
-  private item: any = router.getParams()
+  @State private item: GoodsItem = { id: 0, title: '', price: 0, category: '', image: $r('app.media.icon'), desc: '' }
+
+  aboutToAppear() {
+    const params = router.getParams() as Partial<GoodsItem> | undefined
+    if (params) {
+      const title = params.title
+      const price = params.price
+      if (typeof title === 'string' && typeof price === 'number') {
+        // 逐字段赋值，保证类型安全
+        this.item = {
+          id: typeof params.id === 'number' ? params.id as number : 0,
+          title: title,
+          price: price,
+          category: typeof params.category === 'string' ? params.category as string : '',
+          image: typeof params.image !== 'undefined' ? params.image as Resource : $r('app.media.icon'),
+          desc: typeof params.desc === 'string' ? params.desc as string : ''
+        }
+      }
+    }
+  }
 
   build() {
     Column() {

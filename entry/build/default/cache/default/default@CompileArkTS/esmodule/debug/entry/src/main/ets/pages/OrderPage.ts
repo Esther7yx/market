@@ -45,9 +45,9 @@ class OrderPage extends ViewPU {
     private tabsController: TabsController;
     aboutToAppear() {
         // 获取传递过来的参数
-        const params = router.getParams() as Record<string, number>;
-        if (params && params['initialIndex'] !== undefined) {
-            this.currentIndex = params['initialIndex'];
+        const params = router.getParams() as Record<string, number> | undefined;
+        if (params && typeof params.initialIndex === 'number') {
+            this.currentIndex = params.initialIndex;
         }
     }
     initialRender() {

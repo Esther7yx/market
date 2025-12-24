@@ -1,162 +1,97 @@
 if (!("finalizeConstruction" in ViewPU.prototype)) {
     Reflect.set(ViewPU.prototype, "finalizeConstruction", () => { });
 }
-interface GoodsList_Params {
-    goodsListData?: ListDataSource;
-    startTouchOffsetY?: number;
-    endTouchOffsetY?: number;
+interface GoodsListComponent_Params {
+    data?: GoodsItem[];
 }
-import * as commonConst from "@bundle:com.example.list_harmony/entry/ets/common/CommonConstants";
-import type { GoodsListItemType } from '../viewmodel/InitialData';
-import { ListDataSource } from "@bundle:com.example.list_harmony/entry/ets/viewmodel/ListDataSource";
-export default class GoodsList extends ViewPU {
+import { goodsList } from "@bundle:com.example.list_harmony/entry/ets/viewmodel/InitialData";
+import type { GoodsItem } from "@bundle:com.example.list_harmony/entry/ets/viewmodel/InitialData";
+import router from "@ohos:router";
+export class GoodsListComponent extends ViewPU {
     constructor(parent, params, __localStorage, elmtId = -1, paramsLambda = undefined, extraInfo) {
         super(parent, __localStorage, elmtId, extraInfo);
         if (typeof paramsLambda === "function") {
             this.paramsGenerator_ = paramsLambda;
         }
-        this.__goodsListData = new ObservedPropertyObjectPU(new ListDataSource(), this, "goodsListData");
-        this.addProvidedVar("goodsListData", this.__goodsListData, false);
-        this.startTouchOffsetY = 0;
-        this.endTouchOffsetY = 0;
+        this.data = goodsList;
         this.setInitiallyProvidedValue(params);
         this.finalizeConstruction();
     }
-    setInitiallyProvidedValue(params: GoodsList_Params) {
-        if (params.goodsListData !== undefined) {
-            this.goodsListData = params.goodsListData;
-        }
-        if (params.startTouchOffsetY !== undefined) {
-            this.startTouchOffsetY = params.startTouchOffsetY;
-        }
-        if (params.endTouchOffsetY !== undefined) {
-            this.endTouchOffsetY = params.endTouchOffsetY;
+    setInitiallyProvidedValue(params: GoodsListComponent_Params) {
+        if (params.data !== undefined) {
+            this.data = params.data;
         }
     }
-    updateStateVars(params: GoodsList_Params) {
+    updateStateVars(params: GoodsListComponent_Params) {
     }
     purgeVariableDependenciesOnElmtId(rmElmtId) {
-        this.__goodsListData.purgeDependencyOnElmtId(rmElmtId);
     }
     aboutToBeDeleted() {
-        this.__goodsListData.aboutToBeDeleted();
         SubscriberManager.Get().delete(this.id__());
         this.aboutToBeDeletedInternal();
     }
-    private __goodsListData: ObservedPropertyObjectPU<ListDataSource>;
-    get goodsListData() {
-        return this.__goodsListData.get();
-    }
-    set goodsListData(newValue: ListDataSource) {
-        this.__goodsListData.set(newValue);
-    }
-    private startTouchOffsetY: number;
-    private endTouchOffsetY: number;
+    private data: GoodsItem[];
     initialRender() {
         this.observeComponentCreation2((elmtId, isInitialRender) => {
-            Row.create();
-            Row.justifyContent(FlexAlign.Center);
-            Row.width(commonConst.LAYOUT_WIDTH_OR_HEIGHT);
-        }, Row);
+            // [!code change] 移除构造参数，改用属性方法配置
+            WaterFlow.create();
+            // [!code change] 移除构造参数，改用属性方法配置
+            WaterFlow.columnsTemplate('1fr 1fr');
+            // [!code change] 移除构造参数，改用属性方法配置
+            WaterFlow.columnsGap(12);
+            // [!code change] 移除构造参数，改用属性方法配置
+            WaterFlow.rowsGap(12);
+            // [!code change] 移除构造参数，改用属性方法配置
+            WaterFlow.padding(12);
+            // [!code change] 移除构造参数，改用属性方法配置
+            WaterFlow.backgroundColor('#f5f5f5');
+        }, WaterFlow);
         this.observeComponentCreation2((elmtId, isInitialRender) => {
-            List.create({ space: commonConst.LIST_ITEM_SPACE });
-            List.width(commonConst.GOODS_LIST_WIDTH);
-        }, List);
-        {
-            const __lazyForEachItemGenFunction = _item => {
+            ForEach.create();
+            const forEachItemGenFunction = _item => {
                 const item = _item;
-                {
-                    const itemCreation2 = (elmtId, isInitialRender) => {
-                        ListItem.create(() => { }, false);
-                        ListItem.onTouch((event?: TouchEvent) => {
-                            if (event === undefined) {
-                                return;
-                            }
-                            switch (event.type) {
-                                case TouchType.Down:
-                                    this.startTouchOffsetY = event.touches[0].y;
-                                    break;
-                                case TouchType.Up:
-                                    this.startTouchOffsetY = event.touches[0].y;
-                                    break;
-                                case TouchType.Move:
-                                    if (this.startTouchOffsetY - this.endTouchOffsetY > 0) {
-                                        this.goodsListData.pushData();
-                                    }
-                                    break;
-                            }
+                this.observeComponentCreation2((elmtId, isInitialRender) => {
+                    FlowItem.create();
+                }, FlowItem);
+                this.observeComponentCreation2((elmtId, isInitialRender) => {
+                    Column.create();
+                    Column.padding(8);
+                    Column.backgroundColor('#ffffff');
+                    Column.borderRadius(12);
+                    Column.onClick(() => {
+                        router.pushUrl({
+                            url: 'pages/GoodsDetail',
+                            params: item
                         });
-                    };
-                    const observedDeepRender = () => {
-                        this.observeComponentCreation2(itemCreation2, ListItem);
-                        this.observeComponentCreation2((elmtId, isInitialRender) => {
-                            Row.create();
-                            Row.justifyContent(FlexAlign.SpaceBetween);
-                            Row.height(commonConst.GOODS_LIST_HEIGHT);
-                            Row.width(commonConst.LAYOUT_WIDTH_OR_HEIGHT);
-                        }, Row);
-                        this.observeComponentCreation2((elmtId, isInitialRender) => {
-                            Column.create();
-                            Column.width(commonConst.GOODS_IMAGE_WIDTH);
-                            Column.height(commonConst.LAYOUT_WIDTH_OR_HEIGHT);
-                        }, Column);
-                        this.observeComponentCreation2((elmtId, isInitialRender) => {
-                            Image.create(item?.goodsImg);
-                            Image.width(commonConst.LAYOUT_WIDTH_OR_HEIGHT);
-                            Image.height(commonConst.LAYOUT_WIDTH_OR_HEIGHT);
-                            Image.draggable(false);
-                        }, Image);
-                        Column.pop();
-                        this.observeComponentCreation2((elmtId, isInitialRender) => {
-                            Column.create();
-                            Column.padding(commonConst.GOODS_LIST_PADDING);
-                            Column.width(commonConst.GOODS_FONT_WIDTH);
-                            Column.height(commonConst.LAYOUT_WIDTH_OR_HEIGHT);
-                            Column.justifyContent(FlexAlign.SpaceBetween);
-                        }, Column);
-                        this.observeComponentCreation2((elmtId, isInitialRender) => {
-                            Text.create(item?.goodsName);
-                            Text.fontSize(commonConst.NORMAL_FONT_SIZE);
-                        }, Text);
-                        Text.pop();
-                        this.observeComponentCreation2((elmtId, isInitialRender) => {
-                            Text.create(item?.advertisingLanguage);
-                            Text.fontColor({ "id": 16777239, "type": 10001, params: [], "bundleName": "com.example.list_harmony", "moduleName": "entry" });
-                            Text.fontSize(commonConst.GOODS_EVALUATE_FONT_SIZE);
-                            Text.margin({ right: commonConst.MARGIN_RIGHT });
-                        }, Text);
-                        Text.pop();
-                        this.observeComponentCreation2((elmtId, isInitialRender) => {
-                            Row.create();
-                            Row.justifyContent(FlexAlign.SpaceAround);
-                            Row.width(commonConst.GOODS_LIST_WIDTH);
-                        }, Row);
-                        this.observeComponentCreation2((elmtId, isInitialRender) => {
-                            Text.create(item?.evaluate);
-                            Text.fontSize(commonConst.GOODS_EVALUATE_FONT_SIZE);
-                            Text.fontColor({ "id": 16777237, "type": 10001, params: [], "bundleName": "com.example.list_harmony", "moduleName": "entry" });
-                            Text.width(commonConst.EVALUATE_WIDTH);
-                        }, Text);
-                        Text.pop();
-                        this.observeComponentCreation2((elmtId, isInitialRender) => {
-                            Text.create(item?.priceStr);
-                            Text.fontSize(commonConst.NORMAL_FONT_SIZE);
-                            Text.fontColor({ "id": 16777238, "type": 10001, params: [], "bundleName": "com.example.list_harmony", "moduleName": "entry" });
-                        }, Text);
-                        Text.pop();
-                        Row.pop();
-                        Column.pop();
-                        Row.pop();
-                        ListItem.pop();
-                    };
-                    observedDeepRender();
-                }
+                    });
+                }, Column);
+                this.observeComponentCreation2((elmtId, isInitialRender) => {
+                    Image.create(item.image);
+                    Image.width('100%');
+                    Image.aspectRatio(item.id % 2 === 0 ? 0.75 : 1.25);
+                    Image.borderRadius(12);
+                }, Image);
+                this.observeComponentCreation2((elmtId, isInitialRender) => {
+                    Text.create(item.title);
+                    Text.fontSize(14);
+                    Text.margin({ top: 6 });
+                }, Text);
+                Text.pop();
+                this.observeComponentCreation2((elmtId, isInitialRender) => {
+                    Text.create(`￥${item.price}`);
+                    Text.fontSize(16);
+                    Text.fontColor('#e60012');
+                    Text.margin({ top: 4 });
+                }, Text);
+                Text.pop();
+                Column.pop();
+                FlowItem.pop();
             };
-            LazyForEach.create("1", this, this.goodsListData, __lazyForEachItemGenFunction);
-            LazyForEach.pop();
-        }
-        List.pop();
-        Row.pop();
+            this.forEachUpdateFunction(elmtId, this.data, forEachItemGenFunction);
+        }, ForEach);
+        ForEach.pop();
+        // [!code change] 移除构造参数，改用属性方法配置
+        WaterFlow.pop();
     }
     rerender() {
         this.updateDirtyElements();
